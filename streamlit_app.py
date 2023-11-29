@@ -1,18 +1,6 @@
 import streamlit as st
 import pandas as pd
 import pickle as pk
-# import base64
-
-# Load the background image
-# image = Image.open("image.jpg")
-
-# Convert the image to base64
-# encoded_image = base64.b64encode(image.tobytes()).decode("utf-8")
-
-# Set the background image
-# st.markdown(
-    # f'<style>body {{background-image: url(data:image/jpg;base64,{encoded_image})}}</style>'
-# )
 
 # Load the dataset and pre-trained model
 dataset = pk.load(open("dataset.pkl","rb"))
@@ -22,23 +10,7 @@ pipeline = pk.load(open("pipeline.pkl","rb"))
 st.set_page_config(
     page_title="Real Estate House Price Prediction",
     page_icon="🏠"
-    # layout="wide",
-    # initial_sidebar_state="expanded",
 )
-
-# bg_image_url = "https://images.unsplash.com/photo-1568242629525-62b0c3d77fb7?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-# Add background image
-# st.markdown(
-#     """
-#     <style>
-#         [data-testid="stAppViewContainer"] {
-#             background-image: url('data:image/jpg;base64,{img}');
-#             background-size: cover;
-#         }
-#     </style>
-#     """,
-#     unsafe_allow_html=True,
-# )
 
 # set title and header for web app
 st.title("Real State House Price Prediction")
